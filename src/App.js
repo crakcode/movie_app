@@ -1,5 +1,6 @@
 import Potato from "./Potato";
 import PropTypes from "prop-types";
+import Bitcoin from "./Bitcoin";
 
 function Food({name,picture,rating}){
   return (
@@ -49,7 +50,7 @@ const foodILike = [
 Food.propTypes={
   name:PropTypes.string.isRequired,
   picture:PropTypes.string.isRequired,
-  rating:PropTypes.string.isRequired,
+  rating:PropTypes.number.isRequired,
 }
 
 
@@ -57,15 +58,15 @@ function App() {
   return (
     <div className="App">
       <h1>Hello world</h1>
-      <Potato />
+      {/* <Potato /> */}
       {/* <Food fav="kimchi"/>
       <Food fav="lamen" /> */}
       {/* <Food fav="lamen" papa={["hello",true,1]}/> */}
-      {foodILike.map((item)=>
+      {/* {foodILike.map((item)=>
         <Food key={item.id} name={item.name} picture={item.image} rating={item.rating}/>
-        )}
+        )} */}
       {/* {foodILike.map(renderFood)} */}
-
+        <Bitcoin/>
 
     </div>
   );
